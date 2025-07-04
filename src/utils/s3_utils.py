@@ -11,7 +11,7 @@ def download_file(bucket: str, s3_key: str, local_path: str):
     """
     s3 = boto3.client("s3")
     Path(local_path).parent.mkdir(parents=True, exist_ok=True)
-    s3.download_file(bucket, s3_key, local_path)
+    s3.download_file(Filename=local_path, Bucket=bucket, Key=s3_key)
 
 def upload_file(local_path: str, bucket: str, s3_key: str):
     """
@@ -22,4 +22,4 @@ def upload_file(local_path: str, bucket: str, s3_key: str):
         s3_key (str): Ruta destino dentro del bucket.
     """
     s3 = boto3.client('s3')
-    s3.upload_file(bucket, s3_key, local_path)
+    s3.upload_file(Filename=local_path, Bucket=bucket, Key=s3_key)
