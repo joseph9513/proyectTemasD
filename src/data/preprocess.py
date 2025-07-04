@@ -8,6 +8,7 @@ def preprocess_data(input_path: str, output_path: str):
         input_path (str): Ruta local del archivo raw descargado.
         output_path (str): Ruta local donde guardar el archivo procesado.
     """
+    print(f"Preprocesando datos de {input_path} y enviando datos a {output_path}")
     # Leer el archivo
     df = pd.read_csv(input_path)
 
