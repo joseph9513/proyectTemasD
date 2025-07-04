@@ -13,7 +13,7 @@ def train_model(inputh_data_path: str, ouputh_model_path: str):
         inputh_data_path (str): Ruta local al dataset procesado.
         ouputh_model_path (str): Ruta local donde guardar el modelo entrenado.
     """
-
+    print(f"Entrenando modelo de {inputh_data_path} y guardando modelo en {ouputh_model_path}")    
     # 1. Leer el dataset procesado
     df = pd.read_csv(inputh_data_path)
 
